@@ -1,17 +1,655 @@
 ---
+import Layout from '../layouts/Layout.astro';
+import ArticleGrid from '../components/ArticleGrid.astro';
 
+const articles = [
+  {
+    title: "The Ancient Groves of Corato",
+    excerpt: "Discover the centuries-old olive groves that have shaped the landscape and culture of Apulia.",
+    image: "/hero-olive-grove.png",
+    category: "Heritage"
+  },
+  {
+    title: "Castel del Monte: Geometry in Stone",
+    excerpt: "Exploring the mathematical precision and cultural significance of Frederick II's masterpiece.",
+    image: "/castel-del-monte.png",
+    category: "Architecture"
+  },
+  {
+    title: "The Coratina Cultivar",
+    excerpt: "Understanding the unique characteristics that make Coratina olives exceptional.",
+    image: "/coratina-olives.png",
+    category: "Cultivation"
+  },
+  {
+    title: "Harvest Traditions",
+    excerpt: "The time-honored methods of olive harvesting passed down through generations.",
+    image: "/hero-olive-grove.png",
+    category: "Tradition"
+  },
+  {
+    title: "Tasting Notes",
+    excerpt: "A sensory exploration of Coratina olive oil's distinctive flavor profile.",
+    image: "/coratina-olives.png",
+    category: "Gastronomy"
+  },
+  {
+    title: "Apulian Terroir",
+    excerpt: "How the unique soil and climate of Apulia create extraordinary olive oil.",
+    image: "/hero-olive-grove.png",
+    category: "Terroir"
+  }
+];
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Coratina — An Ode to Apulian Excellence">
+  <main class="overflow-x-hidden">
+    
+    <!-- Academic Book Cover Hero -->
+    <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-ivory">
+      
+      <!-- Clean, elegant background with subtle texture -->
+      <div class="absolute inset-0">
+        <!-- Paper texture overlay -->
+        <div class="absolute inset-0 opacity-[0.02]" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=&quot;0 0 200 200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cfilter id=&quot;noiseFilter&quot;%3E%3CfeTurbulence type=&quot;fractalNoise&quot; baseFrequency=&quot;4&quot; numOctaves=&quot;3&quot; stitchTiles=&quot;stitch&quot;/%3E%3C/filter%3E%3Crect width=&quot;100%&quot; height=&quot;100%&quot; filter=&quot;url(%23noiseFilter)&quot;/%3E%3C/svg%3E');"></div>
+      </div>
+
+      <!-- Book page margins (subtle side borders) -->
+      <div class="absolute inset-0 pointer-events-none">
+        <div class="absolute left-0 top-0 w-16 h-full border-r border-charcoal/5"></div>
+        <div class="absolute right-0 top-0 w-16 h-full border-l border-charcoal/5"></div>
+      </div>
+
+      <!-- Main Content -->
+      <div class="relative z-10 w-full px-8 md:px-16 lg:px-24 py-20">
+        <div class="max-w-7xl mx-auto">
+          
+          <!-- Academic Book Layout -->
+          <div class="grid md:grid-cols-12 gap-12 items-center">
+            
+            <!-- Left: Main Title (spans 7 columns) -->
+            <div id="hero-content" class="md:col-span-7 text-left book-hero-content">
+              
+              <!-- Small academic label -->
+              <div class="mb-6 overflow-hidden">
+                <p class="text-bronze font-heading text-[10px] tracking-[0.4em] uppercase fashion-label">
+                  Apulian Excellence
+                </p>
+              </div>
+              
+              <!-- MASSIVE CORATINA Title -->
+              <div class="mb-8 overflow-hidden">
+                <h1 class="book-title text-charcoal font-display leading-[0.82]">
+                  CORATINA
+                </h1>
+              </div>
+              
+              <!-- Thin gold accent line -->
+              <div class="mb-10 overflow-hidden">
+                <div class="fashion-line w-32 h-[1px] bg-gold-accent opacity-60"></div>
+              </div>
+              
+              <!-- Academic subtitle -->
+              <div class="overflow-hidden mb-12">
+                <p class="fashion-subtitle text-charcoal/70 font-body text-base md:text-lg leading-relaxed max-w-lg font-light">
+                  An intimate exploration of heritage, terroir, and the extraordinary olive oil of Southern Italy
+                </p>
+              </div>
+
+              <!-- Publication details -->
+              <div class="flex items-center gap-8 overflow-hidden">
+                <div class="fashion-year">
+                  <p class="text-bronze font-heading text-[10px] tracking-[0.3em] uppercase">
+                    Est. 2026
+                  </p>
+                </div>
+                <div class="w-px h-4 bg-bronze opacity-30"></div>
+                <div class="fashion-year">
+                  <p class="text-bronze font-heading text-[10px] tracking-[0.3em] uppercase">
+                    First Edition
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Right: Volume Indicator (spans 5 columns) -->
+            <div class="md:col-span-5 hidden md:flex items-center justify-center fashion-visual">
+              <!-- Academic Volume Number -->
+              <div class="text-center relative">
+                <!-- Large background numeral -->
+                <div class="relative">
+                  <span class="block text-[22rem] font-display font-light text-charcoal opacity-[0.03] leading-none select-none">
+                    I
+                  </span>
+                  
+                  <!-- Centered volume label -->
+                  <div class="absolute inset-0 flex items-center justify-center">
+                    <div class="text-center">
+                      <p class="text-bronze font-heading text-[10px] tracking-[0.5em] uppercase mb-6 opacity-80">
+                        Volume
+                      </p>
+                      <p class="text-8xl font-display text-charcoal font-light tracking-tight">
+                        I
+                      </p>
+                      <p class="text-bronze font-heading text-[10px] tracking-[0.5em] uppercase mt-6 opacity-80">
+                        MMXXVI
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+      <!-- Minimal scroll indicator -->
+      <div class="absolute bottom-12 left-1/2 -translate-x-1/2 z-20">
+        <div class="flex flex-col items-center gap-3 fashion-scroll">
+          <p class="text-bronze font-heading text-[9px] tracking-[0.4em] uppercase opacity-60">
+            Scroll
+          </p>
+          <div class="w-px h-12 bg-bronze opacity-30"></div>
+        </div>
+      </div>
+
+      <!-- Horizontal rule separator (like a book chapter end) -->
+      <div class="absolute bottom-0 left-0 right-0 z-10">
+        <div class="max-w-7xl mx-auto px-8 md:px-16 lg:px-24">
+          <div class="border-t border-charcoal/10 book-rule"></div>
+        </div>
+      </div>
+
+    </section>
+
+    <script>
+      // Subtle academic parallax
+      window.addEventListener('scroll', () => {
+        const scrolled = window.scrollY;
+        const heroContent = document.getElementById('hero-content');
+        
+        if (heroContent && scrolled < window.innerHeight) {
+          // Very subtle parallax for elegance
+          heroContent.style.transform = `translateY(${scrolled * 0.15}px)`;
+          heroContent.style.opacity = `${1 - scrolled / 1200}`;
+        }
+      });
+    </script>
+
+    <!-- Act II: The Essence Section -->
+    <section id="essence" class="py-24 md:py-32 px-6 bg-ivory relative">
+      <!-- Top horizontal rule (chapter separator) -->
+      <div class="absolute top-0 left-0 right-0">
+        <div class="max-w-7xl mx-auto px-8 md:px-16 lg:px-24">
+          <div class="border-t border-charcoal/10 book-rule"></div>
+        </div>
+      </div>
+
+      <div class="max-w-7xl mx-auto relative">
+        <!-- Roman Numeral II - Left Margin -->
+        <div class="absolute left-0 top-1/2 -translate-y-1/2 hidden lg:block">
+          <div class="text-[12rem] font-display font-light text-bronze opacity-[0.08] leading-none select-none -ml-8">
+            II
+          </div>
+        </div>
+
+        <!-- Roman Numeral II - Right Margin -->
+        <div class="absolute right-0 top-1/2 -translate-y-1/2 hidden lg:block">
+          <div class="text-[12rem] font-display font-light text-bronze opacity-[0.08] leading-none select-none -mr-8">
+            II
+          </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="max-w-5xl mx-auto">
+          <!-- Act II Label -->
+          <div class="text-center mb-12">
+            <span class="text-xs font-accent uppercase tracking-widest text-bronze opacity-80">
+              Act II — The Essence
+            </span>
+          </div>
+
+          <div class="grid md:grid-cols-5 gap-12 items-center">
+            <!-- Left: Condensed Text (2 columns) -->
+            <div class="md:col-span-2 space-y-6">
+              <h2 class="text-charcoal font-display text-3xl md:text-4xl leading-tight">
+                Coratina
+              </h2>
+              <div class="w-16 h-0.5 bg-gold-accent opacity-60" />
+              <p class="text-base text-charcoal/80 leading-relaxed font-body">
+                Born in Corato, cradled by the limestone-rich Murge plateau, this distinguished cultivar yields an oil of extraordinary character—robust and peppery, with a lingering finish that speaks of ancient groves and centuries of mastery. Rich in polyphenols, each drop carries the essence of Apulia's sun-drenched hills and the passage of civilizations.
+              </p>
+            </div>
+            
+            <!-- Right: Classical Painting (3 columns) -->
+            <div class="md:col-span-3 relative">
+              <div class="aspect-square overflow-hidden rounded-sm border-2 border-charcoal/10 shadow-lg">
+                <img 
+                  src="/apulian-olive-painting.png" 
+                  alt="Classical Apulian olive still life painting" 
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <!-- Painting caption -->
+              <p class="text-center text-xs font-heading tracking-wider text-bronze/60 uppercase mt-4">
+                Apulian Still Life, Classical Tradition
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chapter III: The Journal Section -->
+    <section id="journal" class="py-24 md:py-32 px-6 bg-ivory relative overflow-hidden">
+      <!-- Top horizontal rule (chapter separator) -->
+      <div class="absolute top-0 left-0 right-0">
+        <div class="max-w-7xl mx-auto px-8 md:px-16 lg:px-24">
+          <div class="border-t border-charcoal/10 book-rule"></div>
+        </div>
+      </div>
+
+      <div class="max-w-[1600px] mx-auto relative">
+        <!-- Roman Numeral III - Left Margin -->
+        <div class="absolute left-0 top-1/2 -translate-y-1/2 hidden xl:block pointer-events-none">
+          <div class="text-[12rem] font-display font-light text-bronze opacity-[0.08] leading-none select-none -ml-12">
+            III
+          </div>
+        </div>
+
+        <!-- Roman Numeral III - Right Margin -->
+        <div class="absolute right-0 top-1/2 -translate-y-1/2 hidden xl:block pointer-events-none">
+          <div class="text-[12rem] font-display font-light text-bronze opacity-[0.08] leading-none select-none -mr-12">
+            III
+          </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="max-w-6xl mx-auto">
+          <!-- Chapter III Label -->
+          <div class="text-center mb-16">
+            <span class="text-xs font-accent uppercase tracking-widest text-bronze opacity-80">
+              Chapter III — The Journal
+            </span>
+            <h2 class="text-charcoal font-display text-3xl md:text-4xl mt-6 mb-4">
+              Explorations & Essays
+            </h2>
+            <div class="w-20 h-0.5 bg-gold-accent opacity-60 mx-auto mb-6" />
+            <p class="text-base text-charcoal/70 max-w-xl mx-auto leading-relaxed font-body">
+              A curated collection of writings on olive cultivation, Apulian heritage, and the art of exceptional olive oil.
+            </p>
+          </div>
+
+          <!-- Horizontal Scrolling Container -->
+          <div class="relative">
+            <!-- Left Arrow -->
+            <button 
+              id="scroll-left" 
+              class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 w-12 h-12 rounded-full bg-ivory border-2 border-bronze/20 hover:border-bronze/40 hover:bg-cream transition-all shadow-lg flex items-center justify-center group"
+              aria-label="Scroll left"
+            >
+              <svg class="w-5 h-5 text-bronze group-hover:text-charcoal transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+
+            <!-- Right Arrow with "Older Posts" label -->
+            <button 
+              id="scroll-right" 
+              class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 w-12 h-12 rounded-full bg-ivory border-2 border-bronze/20 hover:border-bronze/40 hover:bg-cream transition-all shadow-lg flex items-center justify-center group"
+              aria-label="Scroll right to older posts"
+            >
+              <svg class="w-5 h-5 text-bronze group-hover:text-charcoal transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+            <div class="absolute right-0 -bottom-8 text-xs font-heading tracking-wider text-bronze/60 uppercase">
+              Older Posts →
+            </div>
+
+            <!-- Articles Carousel -->
+            <div 
+              id="articles-carousel" 
+              class="flex gap-8 overflow-x-auto scroll-smooth pb-4 hide-scrollbar snap-x snap-mandatory"
+              style="scrollbar-width: none; -ms-overflow-style: none;"
+            >
+              {articles.map((article, index) => (
+                <article class="flex-none w-[340px] snap-start group">
+                  <div class="bg-cream border-2 border-charcoal/10 rounded-sm overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 h-full flex flex-col">
+                    <!-- Article Image -->
+                    <div class="aspect-[4/3] overflow-hidden border-b-2 border-charcoal/10">
+                      <img 
+                        src={article.image} 
+                        alt={article.title}
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+                    
+                    <!-- Article Content -->
+                    <div class="p-8 flex-1 flex flex-col">
+                      <!-- Category Badge -->
+                      <div class="mb-4">
+                        <span class="inline-block px-3 py-1 text-[10px] font-heading tracking-widest uppercase bg-bronze/10 text-bronze border border-bronze/20 rounded-sm">
+                          {article.category}
+                        </span>
+                      </div>
+                      
+                      <!-- Title -->
+                      <h3 class="text-xl font-display text-charcoal mb-3 leading-tight group-hover:text-bronze transition-colors">
+                        {article.title}
+                      </h3>
+                      
+                      <!-- Excerpt -->
+                      <p class="text-sm text-charcoal/70 leading-relaxed font-body flex-1">
+                        {article.excerpt}
+                      </p>
+                      
+                      <!-- Read More Link -->
+                      <div class="mt-6 pt-4 border-t border-charcoal/10">
+                        <a href="#" class="text-xs font-heading tracking-wider text-bronze hover:text-charcoal uppercase transition-colors inline-flex items-center gap-2">
+                          Read Essay
+                          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+
+          <!-- Three decorative dots (symbolizing III) -->
+          <div class="flex items-center justify-center gap-3 mt-16">
+            <div class="w-2 h-2 rounded-full bg-bronze/30"></div>
+            <div class="w-2 h-2 rounded-full bg-bronze/30"></div>
+            <div class="w-2 h-2 rounded-full bg-bronze/30"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EPILOGUE -->
+    <section id="epilogue" class="relative min-h-screen py-32 px-6 bg-ivory overflow-hidden">
+      <!-- Top horizontal rule -->
+      <div class="absolute top-0 left-0 right-0">
+        <div class="max-w-7xl mx-auto px-8 md:px-16 lg:px-24">
+          <div class="border-t border-charcoal/10"></div>
+        </div>
+      </div>
+
+      <!-- Complex layered background -->
+      <div class="absolute inset-0 pointer-events-none">
+        <!-- Giant IV watermark - center -->
+        <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+          <div class="text-[32rem] font-display font-light text-charcoal opacity-[0.015] leading-none select-none">
+            IV
+          </div>
+        </div>
+        
+        <!-- Geometric shapes for depth -->
+        <div class="absolute top-20 right-20 w-96 h-96 border border-bronze/5 rounded-full"></div>
+        <div class="absolute bottom-32 left-32 w-64 h-64 border border-charcoal/5"></div>
+      </div>
+
+      <div class="max-w-6xl mx-auto relative z-10">
+        
+        <!-- Header with layered typography -->
+        <div class="text-center mb-24">
+          <div class="relative inline-block">
+            <!-- Background layer -->
+            <div class="absolute inset-0 -z-10">
+              <div class="text-[9px] font-heading uppercase tracking-[0.6em] text-bronze/20 blur-sm">
+                Epilogue
+              </div>
+            </div>
+            <!-- Foreground layer -->
+            <span class="text-[9px] font-heading uppercase tracking-[0.6em] text-bronze opacity-70">
+              Epilogue
+            </span>
+          </div>
+          
+          <h2 class="text-charcoal font-display text-7xl md:text-8xl lg:text-9xl my-12 leading-[0.85] tracking-tighter">
+            EPILOGUE
+          </h2>
+          
+          <!-- Decorative elements -->
+          <div class="flex items-center justify-center gap-4 mb-12">
+            <div class="w-12 h-px bg-charcoal/20"></div>
+            <div class="flex gap-1.5">
+              <div class="w-1 h-1 rounded-full bg-bronze/40"></div>
+              <div class="w-1 h-1 rounded-full bg-bronze/40"></div>
+              <div class="w-1 h-1 rounded-full bg-bronze/40"></div>
+              <div class="w-1 h-1 rounded-full bg-bronze/40"></div>
+            </div>
+            <div class="w-12 h-px bg-charcoal/20"></div>
+          </div>
+          
+          <!-- Poetic subtitle -->
+          <div class="max-w-3xl mx-auto space-y-3">
+            <p class="text-base md:text-lg text-charcoal/70 font-light leading-relaxed">
+              Four elements. Four seasons. Four corners of Corato.
+            </p>
+            <p class="text-sm text-charcoal/50 italic">
+              A complete circle, now open to you.
+            </p>
+          </div>
+        </div>
+
+        <!-- Main Content: Complex Layout -->
+        <div class="grid lg:grid-cols-12 gap-12 mb-24">
+          
+          <!-- Left Column: Newsletter (8 cols) -->
+          <div class="lg:col-span-8 space-y-8">
+            
+            <!-- Newsletter Card with layered design -->
+            <div class="relative">
+              <!-- Background card -->
+              <div class="absolute inset-0 bg-charcoal/5 rounded-sm translate-x-2 translate-y-2"></div>
+              
+              <!-- Main card -->
+              <div class="relative bg-cream border border-charcoal/10 rounded-sm p-10 md:p-12">
+                <!-- Header -->
+                <div class="mb-8">
+                  <div class="flex items-center gap-4 mb-6">
+                    <span class="text-5xl font-display text-bronze/20 font-light">IV</span>
+                    <div class="flex-1 h-px bg-charcoal/10"></div>
+                  </div>
+                  <h3 class="text-3xl md:text-4xl font-display text-charcoal mb-4 tracking-tight leading-tight">
+                    Join Our Circle
+                  </h3>
+                  <p class="text-sm text-charcoal/60 leading-relaxed font-light max-w-xl">
+                    Receive insights on Coratina's exceptional polyphenol research, 
+                    invitations to virtual tastings, and opportunities for restaurant 
+                    collaborations. A quarterly newsletter for those who appreciate excellence.
+                  </p>
+                </div>
+
+                <!-- Newsletter Form -->
+                <form class="space-y-6">
+                  <div class="grid md:grid-cols-2 gap-6">
+                    <div class="relative">
+                      <input 
+                        type="text" 
+                        placeholder="First Name" 
+                        class="w-full px-4 py-4 bg-ivory border border-charcoal/20 focus:border-bronze outline-none text-charcoal placeholder:text-charcoal/30 text-sm font-light transition-all rounded-sm"
+                      />
+                    </div>
+                    <div class="relative">
+                      <input 
+                        type="text" 
+                        placeholder="Last Name" 
+                        class="w-full px-4 py-4 bg-ivory border border-charcoal/20 focus:border-bronze outline-none text-charcoal placeholder:text-charcoal/30 text-sm font-light transition-all rounded-sm"
+                      />
+                    </div>
+                  </div>
+                  
+                  <div class="relative">
+                    <input 
+                      type="email" 
+                      placeholder="Email Address" 
+                      class="w-full px-4 py-4 bg-ivory border border-charcoal/20 focus:border-bronze outline-none text-charcoal placeholder:text-charcoal/30 text-sm font-light transition-all rounded-sm"
+                    />
+                  </div>
+
+                  <!-- Interest checkboxes -->
+                  <div class="pt-4">
+                    <p class="text-xs text-charcoal/50 uppercase tracking-wider mb-4">Interests (Optional)</p>
+                    <div class="grid md:grid-cols-2 gap-3">
+                      <label class="flex items-center gap-3 cursor-pointer group">
+                        <input type="checkbox" class="w-4 h-4 border-charcoal/20 text-bronze focus:ring-bronze rounded-sm" />
+                        <span class="text-sm text-charcoal/70 group-hover:text-charcoal transition-colors">Virtual Tastings</span>
+                      </label>
+                      <label class="flex items-center gap-3 cursor-pointer group">
+                        <input type="checkbox" class="w-4 h-4 border-charcoal/20 text-bronze focus:ring-bronze rounded-sm" />
+                        <span class="text-sm text-charcoal/70 group-hover:text-charcoal transition-colors">Restaurant Collaboration</span>
+                      </label>
+                      <label class="flex items-center gap-3 cursor-pointer group">
+                        <input type="checkbox" class="w-4 h-4 border-charcoal/20 text-bronze focus:ring-bronze rounded-sm" />
+                        <span class="text-sm text-charcoal/70 group-hover:text-charcoal transition-colors">Research & Findings</span>
+                      </label>
+                      <label class="flex items-center gap-3 cursor-pointer group">
+                        <input type="checkbox" class="w-4 h-4 border-charcoal/20 text-bronze focus:ring-bronze rounded-sm" />
+                        <span class="text-sm text-charcoal/70 group-hover:text-charcoal transition-colors">Industry Education</span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <button 
+                    type="submit" 
+                    class="w-full md:w-auto px-12 py-4 bg-charcoal text-ivory text-xs font-heading tracking-[0.25em] uppercase hover:bg-bronze transition-all duration-300 rounded-sm shadow-lg hover:shadow-xl"
+                  >
+                    Subscribe
+                  </button>
+                </form>
+
+                <!-- Small note -->
+                <p class="text-[10px] text-charcoal/40 uppercase tracking-wider mt-8">
+                  Four quarterly editions per year — Unsubscribe anytime
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Info Cards (4 cols) -->
+          <div class="lg:col-span-4 space-y-6">
+            
+            <!-- Waitlist Mention -->
+            <div class="bg-gradient-to-br from-bronze/5 to-transparent border border-bronze/20 rounded-sm p-8">
+              <h4 class="text-lg font-display text-charcoal mb-3">Waitlist</h4>
+              <p class="text-xs text-charcoal/60 leading-relaxed mb-4">
+                Exclusive virtual tastings with Apulian masters. Limited cohorts.
+              </p>
+              <div class="text-[9px] text-bronze/60 uppercase tracking-widest">
+                Via Newsletter
+              </div>
+            </div>
+
+            <!-- Collaboration Mention -->
+            <div class="bg-gradient-to-br from-olive-muted/5 to-transparent border border-olive-muted/20 rounded-sm p-8">
+              <h4 class="text-lg font-display text-charcoal mb-3">Collaborate</h4>
+              <p class="text-xs text-charcoal/60 leading-relaxed mb-4">
+                Partnerships and wholesale for select establishments.
+              </p>
+              <div class="text-[9px] text-olive-muted/60 uppercase tracking-widest">
+                Via Newsletter
+              </div>
+            </div>
+
+            <!-- Stats/Info Card -->
+            <div class="bg-charcoal text-cream rounded-sm p-8">
+              <div class="space-y-6">
+                <div>
+                  <div class="text-3xl font-display text-gold-accent mb-1">4</div>
+                  <div class="text-[10px] text-cream/60 uppercase tracking-wider">Quarterly Editions</div>
+                </div>
+                <div class="h-px bg-cream/10"></div>
+                <div>
+                  <div class="text-3xl font-display text-gold-accent mb-1">∞</div>
+                  <div class="text-[10px] text-cream/60 uppercase tracking-wider">Stories to Share</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Closing Statement -->
+        <div class="text-center pt-20 border-t border-charcoal/10">
+          <p class="text-xs font-heading tracking-[0.4em] text-bronze/50 uppercase mb-8">
+            End of Volume I
+          </p>
+
+          <!-- Coordinates of Corato with decorative elements -->
+          <div class="flex items-center justify-center gap-4">
+            <div class="w-8 h-px bg-charcoal/10"></div>
+            <p class="text-[10px] text-charcoal/30 font-light tracking-wider">
+              41°09′N 16°25′E — Corato, Apulia
+            </p>
+            <div class="w-8 h-px bg-charcoal/10"></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <style>
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+
+    <script>
+      // Horizontal scroll navigation
+      const carousel = document.getElementById('articles-carousel');
+      const scrollLeft = document.getElementById('scroll-left');
+      const scrollRight = document.getElementById('scroll-right');
+
+      if (carousel && scrollLeft && scrollRight) {
+        scrollLeft.addEventListener('click', () => {
+          carousel.scrollBy({ left: -380, behavior: 'smooth' });
+        });
+
+        scrollRight.addEventListener('click', () => {
+          carousel.scrollBy({ left: 380, behavior: 'smooth' });
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'ArrowLeft') {
+            carousel.scrollBy({ left: -380, behavior: 'smooth' });
+          } else if (e.key === 'ArrowRight') {
+            carousel.scrollBy({ left: 380, behavior: 'smooth' });
+          }
+        });
+      }
+    </script>
+
+    <!-- Footer -->
+    <footer class="py-16 px-6 bg-charcoal text-cream/60">
+      <div class="max-w-6xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+          <div class="text-center md:text-left">
+            <h3 class="text-2xl font-display text-ivory mb-2">Coratina</h3>
+            <p class="text-sm text-ivory/70">An ode to Apulian excellence</p>
+          </div>
+          
+          <div class="flex gap-4 items-center">
+            <div class="w-2 h-2 rounded-full bg-olive-muted/40"></div>
+            <div class="w-2 h-2 rounded-full bg-bronze/40"></div>
+            <div class="w-2 h-2 rounded-full bg-gold-accent/40"></div>
+          </div>
+        </div>
+        
+        <div class="mt-12 pt-8 border-t border-ivory/10 text-center text-sm text-ivory/60">
+          <p>© 2026 Coratina. Celebrating the heritage of Corato and Apulia.</p>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+</Layout>
