@@ -46,7 +46,7 @@ const articles = [
   <main class="overflow-x-hidden">
     
     <!-- Academic Book Cover Hero -->
-    <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-ivory">
+    <section id="hero" class="relative min-h-screen flex flex-col justify-center items-center overflow-hidden bg-ivory">
       
       <!-- Clean, elegant background with subtle texture -->
       <div class="absolute inset-0">
@@ -60,86 +60,97 @@ const articles = [
         <div class="absolute right-0 top-0 w-16 h-full border-l border-charcoal/5"></div>
       </div>
 
+      <!-- Background Numerals: I -->
+
+
       <!-- Main Content -->
       <div class="relative z-10 w-full px-8 md:px-16 lg:px-24 py-20">
         <div class="max-w-7xl mx-auto">
           
-          <!-- Academic Book Layout -->
-          <div class="grid md:grid-cols-12 gap-12 items-center">
+          <!-- New Unified Book Layout -->
+          <div class="flex flex-col items-center justify-center w-full">
             
-            <!-- Left: Main Title (spans 7 columns) -->
-            <div id="hero-content" class="md:col-span-7 text-left book-hero-content">
+            <!-- Content Block (Left Aligned Internally) -->
+            <div class="w-max text-left relative max-w-full">
               
               <!-- Small academic label -->
-              <div class="mb-6 overflow-hidden">
-                <p class="text-bronze font-heading text-[10px] tracking-[0.4em] uppercase fashion-label">
-                  Apulian Excellence
+              <div class="mb-4 overflow-hidden">
+                <p class="text-bronze font-roman text-[22px] tracking-[0.4em] uppercase fashion-label pl-1">
+                  Apulian
                 </p>
               </div>
               
-              <!-- MASSIVE CORATINA Title -->
-              <div class="mb-8 overflow-hidden">
+              <!-- UNIFIED TITLE: CORAT - I - NA -->
+              <div class="mb-8 relative z-10 flex items-baseline gap-[0.05em]">
+                <!-- CORAT -->
                 <h1 class="book-title text-charcoal font-display leading-[0.82]">
-                  CORATINA
+                  CORAT
+                </h1>
+                
+                <!-- The "I" Complex -->
+                <div class="relative flex flex-col items-center mx-[0.02em]">
+                  <!-- Volume Label (Top) -->
+                  <p class="absolute -top-48 text-bronze font-roman text-base tracking-[0.8em] uppercase opacity-80 whitespace-nowrap">
+                    Volume
+                  </p>
+                  
+                  <!-- The Main I -->
+                  <h1 class="book-title text-charcoal font-display leading-[0.82] relative z-10">
+                    I
+                  </h1>
+
+                  <!-- The Shadow I (Background) -->
+                  <div class="absolute top-1/2 left-1/2 -translate-x-[51.8%] -translate-y-1/2 -z-10 pointer-events-none select-none flex items-center justify-center">
+                     <span class="text-[35rem] md:text-[65rem] font-display font-light leading-none text-charcoal opacity-[0.08]">I</span>
+                  </div>
+                  
+                  <!-- Year Label (Bottom) -->
+                  <p class="absolute -bottom-52 text-bronze font-roman text-base tracking-[0.8em] uppercase opacity-80 whitespace-nowrap">
+                    MMXXVI
+                  </p>
+                </div>
+
+                <!-- NA -->
+                <h1 class="book-title text-charcoal font-display leading-[0.82]">
+                  NA
                 </h1>
               </div>
               
               <!-- Thin gold accent line -->
-              <div class="mb-10 overflow-hidden">
-                <div class="fashion-line w-32 h-[1px] bg-gold-accent opacity-60"></div>
+              <div class="mb-8 overflow-hidden pl-1">
+                <div class="fashion-line w-37 h-[1px] bg-gold-accent opacity-60"></div>
               </div>
               
-              <!-- Academic subtitle -->
-              <div class="overflow-hidden mb-12">
-                <p class="fashion-subtitle text-charcoal/70 font-body text-base md:text-lg leading-relaxed max-w-lg font-light">
-                  An intimate exploration of heritage, terroir, and the extraordinary olive oil of Southern Italy
+              
+              <!-- Subtitle (Constrained to ~2 lines) -->
+              <div class="mb-8 pl-1">
+                <p class="fashion-subtitle text-charcoal/60 font-olive text-xl md:text-2xl leading-tight max-w-[360px] font-normal">
+                  An intimate exploration of heritage and innovation.
                 </p>
               </div>
 
               <!-- Publication details -->
-              <div class="flex items-center gap-8 overflow-hidden">
+              <div class="flex items-center gap-8 overflow-hidden pl-1">
                 <div class="fashion-year">
-                  <p class="text-bronze font-heading text-[10px] tracking-[0.3em] uppercase">
+                  <p class="text-bronze font-roman text-[16px] tracking-[0.3em] uppercase">
                     Est. 2026
                   </p>
                 </div>
                 <div class="w-px h-4 bg-bronze opacity-30"></div>
                 <div class="fashion-year">
-                  <p class="text-bronze font-heading text-[10px] tracking-[0.3em] uppercase">
+                  <p class="text-bronze font-roman text-[16px] tracking-[0.3em] uppercase">
                     First Edition
                   </p>
                 </div>
-              </div>
-            </div>
-            
-            <!-- Right: Volume Indicator (spans 5 columns) -->
-            <div class="md:col-span-5 hidden md:flex items-center justify-center fashion-visual">
-              <!-- Academic Volume Number -->
-              <div class="text-center relative">
-                <!-- Large background numeral -->
-                <div class="relative">
-                  <span class="block text-[22rem] font-display font-light text-charcoal opacity-[0.03] leading-none select-none">
-                    I
-                  </span>
-                  
-                  <!-- Centered volume label -->
-                  <div class="absolute inset-0 flex items-center justify-center">
-                    <div class="text-center">
-                      <p class="text-bronze font-heading text-[10px] tracking-[0.5em] uppercase mb-6 opacity-80">
-                        Volume
-                      </p>
-                      <p class="text-8xl font-display text-charcoal font-light tracking-tight">
-                        I
-                      </p>
-                      <p class="text-bronze font-heading text-[10px] tracking-[0.5em] uppercase mt-6 opacity-80">
-                        MMXXVI
-                      </p>
-                    </div>
-                  </div>
+                <div class="w-px h-4 bg-bronze opacity-30"></div>
+                <div class="fashion-year">
+                  <p class="text-bronze font-roman text-[16px] tracking-[0.3em] uppercase">
+                    Harvest 2026
+                  </p>
                 </div>
               </div>
+
             </div>
-            
           </div>
         </div>
       </div>
@@ -178,7 +189,7 @@ const articles = [
     </script>
 
     <!-- Act II: The Essence Section -->
-    <section id="essence" class="py-24 md:py-32 px-6 bg-ivory relative">
+    <section id="essence" class="min-h-screen flex flex-col justify-center py-24 md:py-32 px-6 bg-ivory relative">
       <!-- Top horizontal rule (chapter separator) -->
       <div class="absolute top-0 left-0 right-0">
         <div class="max-w-7xl mx-auto px-8 md:px-16 lg:px-24">
@@ -186,26 +197,18 @@ const articles = [
         </div>
       </div>
 
+      <!-- Background Numerals: II -->
+      <div class="absolute top-0 inset-x-0 h-screen pointer-events-none overflow-hidden select-none flex items-center justify-between px-12 md:px-24 opacity-[0.06]">
+        <span class="text-[20rem] md:text-[30rem] font-display font-light leading-none text-bronze translate-y-8">II</span>
+        <span class="text-[20rem] md:text-[30rem] font-display font-light leading-none text-bronze translate-y-8">II</span>
+      </div>
+
       <div class="max-w-7xl mx-auto relative">
-        <!-- Roman Numeral II - Left Margin -->
-        <div class="absolute left-0 top-1/2 -translate-y-1/2 hidden lg:block">
-          <div class="text-[12rem] font-display font-light text-bronze opacity-[0.08] leading-none select-none -ml-8">
-            II
-          </div>
-        </div>
-
-        <!-- Roman Numeral II - Right Margin -->
-        <div class="absolute right-0 top-1/2 -translate-y-1/2 hidden lg:block">
-          <div class="text-[12rem] font-display font-light text-bronze opacity-[0.08] leading-none select-none -mr-8">
-            II
-          </div>
-        </div>
-
         <!-- Main Content -->
         <div class="max-w-5xl mx-auto">
           <!-- Act II Label -->
           <div class="text-center mb-12">
-            <span class="text-xs font-accent uppercase tracking-widest text-bronze opacity-80">
+            <span class="text-xs font-roman uppercase tracking-widest text-bronze opacity-80">
               Act II — The Essence
             </span>
           </div>
@@ -232,7 +235,7 @@ const articles = [
                 />
               </div>
               <!-- Painting caption -->
-              <p class="text-center text-xs font-heading tracking-wider text-bronze/60 uppercase mt-4">
+              <p class="text-center text-xs font-roman tracking-wider text-bronze/60 uppercase mt-4">
                 Apulian Still Life, Classical Tradition
               </p>
             </div>
@@ -242,7 +245,7 @@ const articles = [
     </section>
 
     <!-- Chapter III: The Journal Section -->
-    <section id="journal" class="py-24 md:py-32 px-6 bg-ivory relative overflow-hidden">
+    <section id="journal" class="min-h-screen flex flex-col justify-center py-24 md:py-32 px-6 bg-ivory relative overflow-hidden">
       <!-- Top horizontal rule (chapter separator) -->
       <div class="absolute top-0 left-0 right-0">
         <div class="max-w-7xl mx-auto px-8 md:px-16 lg:px-24">
@@ -250,26 +253,15 @@ const articles = [
         </div>
       </div>
 
+      <!-- Background Numerals: III -->
+
+
       <div class="max-w-[1600px] mx-auto relative">
-        <!-- Roman Numeral III - Left Margin -->
-        <div class="absolute left-0 top-1/2 -translate-y-1/2 hidden xl:block pointer-events-none">
-          <div class="text-[12rem] font-display font-light text-bronze opacity-[0.08] leading-none select-none -ml-12">
-            III
-          </div>
-        </div>
-
-        <!-- Roman Numeral III - Right Margin -->
-        <div class="absolute right-0 top-1/2 -translate-y-1/2 hidden xl:block pointer-events-none">
-          <div class="text-[12rem] font-display font-light text-bronze opacity-[0.08] leading-none select-none -mr-12">
-            III
-          </div>
-        </div>
-
         <!-- Main Content -->
         <div class="max-w-6xl mx-auto">
           <!-- Chapter III Label -->
           <div class="text-center mb-16">
-            <span class="text-xs font-accent uppercase tracking-widest text-bronze opacity-80">
+            <span class="text-xs font-roman uppercase tracking-widest text-bronze opacity-80">
               Chapter III — The Journal
             </span>
             <h2 class="text-charcoal font-display text-3xl md:text-4xl mt-6 mb-4">
@@ -330,7 +322,7 @@ const articles = [
                     <div class="p-8 flex-1 flex flex-col">
                       <!-- Category Badge -->
                       <div class="mb-4">
-                        <span class="inline-block px-3 py-1 text-[10px] font-heading tracking-widest uppercase bg-bronze/10 text-bronze border border-bronze/20 rounded-sm">
+                        <span class="inline-block px-3 py-1 text-[10px] font-roman tracking-widest uppercase bg-bronze/10 text-bronze border border-bronze/20 rounded-sm">
                           {article.category}
                         </span>
                       </div>
@@ -372,7 +364,7 @@ const articles = [
     </section>
 
     <!-- EPILOGUE -->
-    <section id="epilogue" class="relative min-h-screen py-32 px-6 bg-ivory overflow-hidden">
+    <section id="epilogue" class="relative min-h-screen flex flex-col justify-center py-32 px-6 bg-ivory overflow-hidden">
       <!-- Top horizontal rule -->
       <div class="absolute top-0 left-0 right-0">
         <div class="max-w-7xl mx-auto px-8 md:px-16 lg:px-24">
@@ -382,12 +374,6 @@ const articles = [
 
       <!-- Complex layered background -->
       <div class="absolute inset-0 pointer-events-none">
-        <!-- Giant IV watermark - center -->
-        <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-          <div class="text-[32rem] font-display font-light text-charcoal opacity-[0.015] leading-none select-none">
-            IV
-          </div>
-        </div>
         
         <!-- Geometric shapes for depth -->
         <div class="absolute top-20 right-20 w-96 h-96 border border-bronze/5 rounded-full"></div>
@@ -406,7 +392,7 @@ const articles = [
               </div>
             </div>
             <!-- Foreground layer -->
-            <span class="text-[9px] font-heading uppercase tracking-[0.6em] text-bronze opacity-70">
+            <span class="text-[9px] font-roman uppercase tracking-[0.6em] text-bronze opacity-70">
               Epilogue
             </span>
           </div>

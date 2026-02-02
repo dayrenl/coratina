@@ -4,7 +4,12 @@ interface Props {
   description?: string;
 }
 
-const { title, description = "An educational journey through Coratina olive oil, Apulian culture, and the heritage of Corato" } = Astro.props;
+const {
+  title,
+  description = "An educational journey through Coratina olive oil, Apulian culture, and the heritage of Corato",
+} = Astro.props;
+
+import "../styles/global.css";
 ---
 
 <!doctype html>
@@ -25,5 +30,18 @@ const { title, description = "An educational journey through Coratina olive oil,
 </html>
 
 <style is:global>
-  @import '../styles/global.css';
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 9999;
+    background-image:
+      linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    background-size: 16px 16px;
+  }
 </style>
