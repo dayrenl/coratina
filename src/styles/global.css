@@ -193,13 +193,19 @@
 
 /* Academic Book Cover Hero Styles */
 .book-title {
-    font-size: clamp(4.5rem, 18vw, 14rem);
+    font-size: clamp(3rem, 12vw, 14rem);
     font-weight: 700;
     letter-spacing: 0.05em;
     line-height: 0.82;
     opacity: 0;
     transform: translateY(50px);
     animation: academicFadeIn 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+}
+
+@media (max-width: 640px) {
+    .book-title {
+        letter-spacing: 0.02em;
+    }
 }
 
 .book-hero-content {

@@ -64,7 +64,7 @@ const articles = [
 
 
       <!-- Main Content -->
-      <div class="relative z-10 w-full px-8 md:px-16 lg:px-24 py-20">
+      <div class="relative z-10 w-full px-4 sm:px-8 md:px-16 lg:px-24 py-12 sm:py-20">
         <div class="max-w-7xl mx-auto">
           
           <!-- New Unified Book Layout -->
@@ -90,7 +90,7 @@ const articles = [
                 <!-- The "I" Complex -->
                 <div class="relative flex flex-col items-center mx-[0.02em]">
                   <!-- Volume Label (Top) -->
-                  <p class="absolute -top-48 text-bronze font-roman text-base tracking-[0.8em] uppercase opacity-80 whitespace-nowrap">
+                  <p class="absolute -top-24 sm:-top-32 md:-top-48 text-bronze font-roman text-xs sm:text-sm md:text-base tracking-[0.8em] uppercase opacity-80 whitespace-nowrap">
                     Volume
                   </p>
                   
@@ -101,11 +101,11 @@ const articles = [
 
                   <!-- The Shadow I (Background) -->
                   <div class="absolute top-1/2 left-1/2 -translate-x-[51.8%] -translate-y-1/2 -z-10 pointer-events-none select-none flex items-center justify-center">
-                     <span class="text-[35rem] md:text-[65rem] font-display font-light leading-none text-charcoal opacity-[0.08]">I</span>
+                     <span class="text-[20rem] sm:text-[35rem] md:text-[50rem] lg:text-[65rem] font-display font-light leading-none text-charcoal opacity-[0.05] sm:opacity-[0.08]">I</span>
                   </div>
                   
                   <!-- Year Label (Bottom) -->
-                  <p class="absolute -bottom-52 text-bronze font-roman text-base tracking-[0.8em] uppercase opacity-80 whitespace-nowrap">
+                  <p class="absolute -bottom-28 sm:-bottom-40 md:-bottom-52 text-bronze font-roman text-xs sm:text-sm md:text-base tracking-[0.8em] uppercase opacity-80 whitespace-nowrap">
                     MMXXVI
                   </p>
                 </div>
@@ -130,21 +130,21 @@ const articles = [
               </div>
 
               <!-- Publication details -->
-              <div class="flex items-center gap-4 overflow-hidden pl-1">
+              <div class="flex flex-col sm:flex-row items-center sm:items-start gap-3 sm:gap-6 md:gap-8 overflow-hidden pl-1">
                 <div class="fashion-year">
-                  <p class="text-bronze font-roman text-[14px] tracking-[0.3em] uppercase">
+                  <p class="text-bronze font-roman text-[14px] sm:text-[16px] tracking-[0.3em] uppercase">
                     Est. 2026
                   </p>
                 </div>
-                <div class="w-px h-4 bg-bronze opacity-30"></div>
+                <div class="hidden sm:block w-px h-4 bg-bronze opacity-30"></div>
                 <div class="fashion-year">
-                  <p class="text-bronze font-roman text-[14px] tracking-[0.3em] uppercase">
+                  <p class="text-bronze font-roman text-[14px] sm:text-[16px] tracking-[0.3em] uppercase">
                     First Edition
                   </p>
                 </div>
-                <div class="w-px h-4 bg-bronze opacity-30"></div>
+                <div class="hidden sm:block w-px h-4 bg-bronze opacity-30"></div>
                 <div class="fashion-year">
-                  <p class="text-bronze font-roman text-[14px] tracking-[0.3em] uppercase">
+                  <p class="text-bronze font-roman text-[14px] sm:text-[16px] tracking-[0.3em] uppercase">
                     Harvest 2026
                   </p>
                 </div>
@@ -218,9 +218,9 @@ const articles = [
             </span>
           </div>
 
-          <div class="grid md:grid-cols-5 gap-12 items-center">
+          <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 md:gap-12 items-center">
             <!-- Left: Condensed Text (2 columns) -->
-            <div class="md:col-span-2 space-y-6">
+            <div class="lg:col-span-2 space-y-6 max-w-prose mx-auto lg:mx-0">
               <h2 class="text-charcoal font-display text-3xl md:text-4xl leading-tight">
                 Coratina
               </h2>
@@ -231,7 +231,7 @@ const articles = [
             </div>
             
             <!-- Right: Classical Painting (3 columns) -->
-            <div class="md:col-span-3 relative">
+            <div class="lg:col-span-3 relative">
               <div class="aspect-square overflow-hidden rounded-sm border-2 border-charcoal/10 shadow-lg">
                 <img 
                   src="/apulian-olive-painting.png" 
@@ -312,7 +312,7 @@ const articles = [
               style="scrollbar-width: none; -ms-overflow-style: none;"
             >
               {articles.map((article, index) => (
-                <article class="flex-none w-[340px] snap-start group">
+                <article class="flex-none w-[85vw] sm:w-[340px] max-w-[340px] snap-start group">
                   <div class="bg-cream border-2 border-charcoal/10 rounded-sm overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 h-full flex flex-col">
                     <!-- Article Image -->
                     <div class="aspect-[4/3] overflow-hidden border-b-2 border-charcoal/10">
