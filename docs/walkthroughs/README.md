@@ -29,6 +29,29 @@ Fixed critical responsive design issues across all breakpoints (mobile, tablet, 
 
 ---
 
+### 02. Font Substitution: Cinzel → Forum
+**Files:**
+- [02-font-substitution-plan.md](./02-font-substitution-plan.md) — Implementation plan
+- [02-font-substitution.md](./02-font-substitution.md) — Complete walkthrough
+
+**Summary:**  
+Replaced Cinzel with Forum font for all display typography, achieving a more authentic Roman inscription aesthetic with enhanced elegance and sophistication.
+
+**Key Achievements:**
+- ✅ Authentic Roman inscription aesthetic
+- ✅ Enhanced visual refinement and elegance
+- ✅ Better typographic harmony (Forum + Cormorant Garamond)
+- ✅ Improved performance (83% font size reduction, ~100KB savings)
+- ✅ Perfect letter-spacing and readability
+- ✅ Maintained centered editorial aesthetic
+
+**Screenshots:**
+- [Desktop Hero](./forum-desktop-hero.png)
+- [Desktop EPILOGUE](./forum-desktop-epilogue.png)
+- [Mobile Hero](./forum-mobile-hero.png)
+
+---
+
 ## 📝 Document Structure
 
 Each walkthrough follows this structure:
@@ -57,6 +80,7 @@ These walkthroughs serve multiple purposes:
 ## 📅 Timeline
 
 - **2026-02-04** — Responsive Design Implementation
+- **2026-02-04** — Font Substitution (Cinzel → Forum)
 
 ---
 
