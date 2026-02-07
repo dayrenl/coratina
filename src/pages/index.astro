@@ -73,78 +73,84 @@ const articles = [
             <!-- Content Block (Left Aligned Internally) -->
             <div class="w-max text-left relative max-w-full">
               
-              <!-- Small academic label -->
-              <div class="mb-4 overflow-hidden">
-                <p class="text-bronze font-roman text-[22px] tracking-[0.4em] uppercase fashion-label pl-1">
-                  Apulian
-                </p>
-              </div>
-              
               <!-- UNIFIED TITLE: CORAT - I - NA -->
-              <div class="mb-8 relative z-10 flex items-baseline gap-[0.05em]">
-                <!-- CORAT -->
-                <h1 class="book-title text-charcoal font-display leading-[0.82]">
-                  CORAT
+              <div class="mb-8 relative z-10 flex items-center justify-center sm:justify-start">
+                
+                <!-- CORAT Group -->
+                <h1 class="book-title text-charcoal font-display leading-[0.82] relative z-20">
+                  <span class="relative inline-flex flex-col items-center">
+                    <!-- Apulian Crown (Floating Above, Width Matched) -->
+                    <span class="absolute top-0 left-1/2 -translate-x-1/2 w-[90%] -translate-y-[100%] text-bronze font-roman text-[0.075em] uppercase opacity-80 flex justify-between leading-none pointer-events-none pb-[0.2em]">
+                      <span>A</span><span>p</span><span>u</span><span>l</span><span>i</span><span>a</span><span>n</span>
+                    </span>
+                    C
+                  </span>ORAT
                 </h1>
                 
-                <!-- The "I" Complex -->
-                <div class="relative flex flex-col items-center mx-[0.02em]">
-                  <!-- Volume Label (Top) -->
-                  <p class="absolute -top-24 sm:-top-32 md:-top-48 text-bronze font-roman text-xs sm:text-sm md:text-base tracking-[0.8em] uppercase opacity-80 whitespace-nowrap">
+                <!-- The "I" Complex (Vertical Stack) -->
+                <!-- Aggressive negative margin to pull it tight to CORAT -->
+                <div class="flex flex-col items-center group mx-[-0.15em] relative z-10 translate-y-[0.02em]">
+                  <!-- Volume Label (Touching Top) -->
+                  <p class="mb-0 text-bronze font-roman text-[0.6rem] sm:text-[0.8rem] md:text-[1rem] tracking-[0.4em] uppercase opacity-80 whitespace-nowrap leading-none transition-transform duration-700 ease-out group-hover:-translate-y-1">
                     Volume
                   </p>
                   
-                  <!-- The Main I -->
-                  <h1 class="book-title text-charcoal font-display leading-[0.82] relative z-10">
-                    I
-                  </h1>
-
-                  <!-- The Shadow I (Background) -->
-                  <div class="absolute top-1/2 left-1/2 -translate-x-[51.8%] -translate-y-1/2 -z-10 pointer-events-none select-none flex items-center justify-center">
-                     <span class="text-[20rem] sm:text-[35rem] md:text-[50rem] lg:text-[65rem] font-display leading-none text-charcoal opacity-[0.06] sm:opacity-[0.10]">I</span>
+                  <!-- I + Shadow Container -->
+                  <div class="relative flex items-center justify-center">
+                    <!-- The Main I -->
+                    <h1 class="book-title text-charcoal font-display leading-[0.82] relative z-10">
+                      I
+                    </h1>
+                    <!-- The Shadow I (Fluid VW Sizing) -->
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 pointer-events-none select-none flex items-center justify-center w-screen h-screen overflow-hidden">
+                       <span class="text-[40vw] font-display leading-none text-charcoal opacity-[0.06] sm:opacity-[0.10] whitespace-nowrap">I</span>
+                    </div>
                   </div>
                   
-                  <!-- Year Label (Bottom) -->
-                  <p class="absolute -bottom-28 sm:-bottom-40 md:-bottom-52 text-bronze font-roman text-xs sm:text-sm md:text-base tracking-[0.8em] uppercase opacity-80 whitespace-nowrap">
+                  <!-- Year Label (Touching Bottom) -->
+                  <p class="mt-0 text-bronze font-roman text-[0.6rem] sm:text-[0.8rem] md:text-[1rem] tracking-[0.4em] uppercase opacity-80 whitespace-nowrap leading-none transition-transform duration-700 ease-out group-hover:translate-y-1">
                     MMXXVI
                   </p>
                 </div>
 
                 <!-- NA -->
-                <h1 class="book-title text-charcoal font-display leading-[0.82]">
+                <h1 class="book-title text-charcoal font-display leading-[0.82] relative z-20">
                   NA
                 </h1>
               </div>
               
               <!-- Thin gold accent line -->
-              <div class="mb-8 overflow-hidden pl-1">
+              <div class="mb-8 overflow-hidden pl-1 flex justify-center sm:justify-start w-full">
                 <div class="fashion-line w-37 h-[1px] bg-gold-accent opacity-60"></div>
               </div>
               
               
               <!-- Subtitle (Constrained to ~2 lines) -->
-              <div class="mb-8 pl-1">
+              <div class="mb-8 pl-1 text-center sm:text-left w-full flex justify-center sm:justify-start">
                 <p class="fashion-subtitle text-charcoal/60 font-olive text-xl md:text-2xl leading-tight max-w-[360px] font-normal">
                   An intimate exploration of heritage and innovation.
                 </p>
               </div>
 
               <!-- Publication details -->
-              <div class="flex flex-col sm:flex-row items-center sm:items-start gap-3 sm:gap-6 md:gap-8 overflow-hidden pl-1">
+              <div class="flex flex-wrap justify-center sm:justify-start items-center gap-y-3 gap-x-6 md:gap-8 overflow-hidden pl-1 w-full">
                 <div class="fashion-year">
-                  <p class="text-bronze font-roman text-[14px] sm:text-[16px] tracking-[0.3em] uppercase">
+                  <p class="text-bronze font-roman text-[14px] sm:text-[16px] tracking-[0.3em] uppercase whitespace-nowrap">
                     Est. 2026
                   </p>
                 </div>
+                <!-- Divider hidden on mobile if stacked, shown if row -->
                 <div class="hidden sm:block w-px h-4 bg-bronze opacity-30"></div>
+                
                 <div class="fashion-year">
-                  <p class="text-bronze font-roman text-[14px] sm:text-[16px] tracking-[0.3em] uppercase">
+                  <p class="text-bronze font-roman text-[14px] sm:text-[16px] tracking-[0.3em] uppercase whitespace-nowrap">
                     First Edition
                   </p>
                 </div>
                 <div class="hidden sm:block w-px h-4 bg-bronze opacity-30"></div>
+                
                 <div class="fashion-year">
-                  <p class="text-bronze font-roman text-[14px] sm:text-[16px] tracking-[0.3em] uppercase">
+                  <p class="text-bronze font-roman text-[14px] sm:text-[16px] tracking-[0.3em] uppercase whitespace-nowrap">
                     Harvest 2026
                   </p>
                 </div>
@@ -465,14 +471,14 @@ const articles = [
                       <input 
                         type="text" 
                         placeholder="First Name" 
-                        class="w-full px-4 py-4 bg-ivory border border-charcoal/20 focus:border-bronze outline-none text-charcoal placeholder:text-charcoal/30 text-sm font-light transition-all rounded-sm"
+                        class="w-full px-0 py-4 bg-transparent border-b border-charcoal/20 focus:border-bronze outline-none text-charcoal placeholder:text-charcoal/30 text-sm font-light transition-all rounded-none ring-0"
                       />
                     </div>
                     <div class="relative">
                       <input 
                         type="text" 
                         placeholder="Last Name" 
-                        class="w-full px-4 py-4 bg-ivory border border-charcoal/20 focus:border-bronze outline-none text-charcoal placeholder:text-charcoal/30 text-sm font-light transition-all rounded-sm"
+                        class="w-full px-0 py-4 bg-transparent border-b border-charcoal/20 focus:border-bronze outline-none text-charcoal placeholder:text-charcoal/30 text-sm font-light transition-all rounded-none ring-0"
                       />
                     </div>
                   </div>
@@ -481,7 +487,7 @@ const articles = [
                     <input 
                       type="email" 
                       placeholder="Email Address" 
-                      class="w-full px-4 py-4 bg-ivory border border-charcoal/20 focus:border-bronze outline-none text-charcoal placeholder:text-charcoal/30 text-sm font-light transition-all rounded-sm"
+                      class="w-full px-0 py-4 bg-transparent border-b border-charcoal/20 focus:border-bronze outline-none text-charcoal placeholder:text-charcoal/30 text-sm font-light transition-all rounded-none ring-0"
                     />
                   </div>
 

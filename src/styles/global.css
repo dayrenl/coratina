@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Forum&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -15,9 +16,9 @@
 
     /* Premium Typography */
     --font-family-display: 'Forum', serif;
-    --font-family-heading: 'Cormorant Garamond', serif;
+    --font-family-heading: 'Forum', serif;
     --font-family-body: 'Lora', serif;
-    --font-family-accent: 'Cormorant Garamond', serif;
+    --font-family-accent: 'Lora', serif;
 
     /* Spacing Scale */
     --spacing-xs: 0.5rem;
@@ -28,8 +29,6 @@
 }
 
 @layer base {
-    /* Import Premium Fonts */
-    @import url('https://fonts.googleapis.com/css2?family=Forum&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Tenor+Sans&display=swap');
 
     * {
         margin: 0;
@@ -38,10 +37,28 @@
     }
 
     html {
-        scroll-behavior: smooth;
+        /* scroll-behavior: smooth;  Disabled for Lenis */
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         overflow-x: hidden;
+    }
+
+    /* Lenis Recommended Styles */
+    html.lenis,
+    html.lenis body {
+        height: auto;
+    }
+
+    .lenis.lenis-smooth {
+        scroll-behavior: auto !important;
+    }
+
+    .lenis.lenis-stopped {
+        overflow: hidden;
+    }
+
+    .lenis.lenis-scrolling iframe {
+        pointer-events: none;
     }
 
     body {
@@ -91,9 +108,10 @@
     }
 
     .font-olive {
-        font-family: 'Tenor Sans', sans-serif;
+        font-family: var(--font-family-body);
+        font-style: italic;
         line-height: 1.5;
-        letter-spacing: 0.04em;
+        letter-spacing: 0.02em;
     }
 
     /* Luxury Color Utilities */

@@ -489,6 +489,16 @@ group-hover:scale-105 transition-transform duration-500
 - Connects to Italian heritage
 - Creates visual rhythm
 
+### Hero Layout Strategy (2026 Refactor)
+
+**Flexbox over Absolute Positioning**
+- **Decision**: The central "I" column (Volume - I - MMXXVI) was refactored from absolute positioning to a Flexbox/Grid layout.
+- **Rationale**: Absolute positioning with fixed units (`top-48`) fails on smaller screens or when font sizes scale. Using a vertical flex container ensures the "Volume" and "MMXXVI" labels remain strictly attached to the "I" regardless of screen height or width, preserving the "architectural column" metaphor.
+
+**The "Shadow I" Alignment**
+- **Decision**: The background Shadow I is now centered programmatically (`translate-x/y-1/2`) rather than manually (`51.8%`).
+- **Rationale**: Removes "magic numbers" that only work at specific resolutions. Programmatic centering allows the shadow to scale perfectly from mobile to 4K without "drifting" relative to the foreground text.
+
 ---
 
 ## 📚 References & Inspiration
