@@ -142,6 +142,35 @@ Join our quarterly newsletter for:
 
 ---
 
+## How to Run the Application
+
+If you do not have Node.js installed, we recommend using [Node Version Manager (nvm)](https://github.com/nvm-sh/nvm) to set up an isolated Node environment.
+
+1. **Enter the application directory**:
+   ```bash
+   cd coratina
+   ```
+
+2. **Ensure Node.js is installed and loaded** (e.g., using `nvm` with Node v20):
+   ```bash
+   nvm install 20
+   nvm use 20
+   ```
+
+3. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+4. **Start the development server**:
+   ```bash
+   npm run dev
+   ```
+
+5. **View the application**: Open your browser and navigate to the local URL provided in the terminal (by default `http://localhost:4321/`).
+
+---
+
 ## Documentation
 
 - **[DESIGN.md](./DESIGN.md)** — Comprehensive design system documentation
